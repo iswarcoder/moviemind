@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: moviemind-api
+    runtime: node
+    rootDir: backend
+    plan: starter
+    region: oregon
+    healthCheckPath: /api/health
+    buildCommand: npm ci
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: OMDB_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
