@@ -1,0 +1,9 @@
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.env
+.env.*
+backend/.env
+frontend/.env
+Untitled-1.js
